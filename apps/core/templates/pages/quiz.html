@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+
+{% block title %}
+    My Site - Home
+{% endblock title %}
+
+
+{% block content %}
+
+<form action="/results/" method="POST">
+       {% for herb in herbs %} 
+       {% csrf_token %}
+        <div class="quiz">
+            <div class="question_1">
+                <h2 class="quiz-question">{{ herb.question }}</h2>
+                <div class="question_1">
+                        <br>
+                        <input type="radio" name="answer_{{ herb.id }}" value="true"> Yes<br>
+                        <input type="radio" name="answer_{{ herb.id }}" value="false"> No<br>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <button>Submit</button>
+
+</form>
+            
+          <br><br><br>
+
+            <form action="/results/" method="POST">
+                {% csrf_token %}
+                <input name="number" type="hidden" value="" />
+                <input name="redirect" type="hidden" value="true" />
+                <button class="btn btn-success">Submit</button>
+            </form>
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           <form action="/results/" method="post">
+                <h2 class="quiz-question">Have you been experiencing anxiety, depression and nervous insomnia?</h2>
+                    <div class="question_1">
+                        <input id="answer_yes" type="button" value="Yes">
+                        <br>
+                        <input id="answer_no" type="button" value="No">
+                    </div>
+                <br>
+                <br>
+                <br>
+                <h2 class="quiz-question">Have you been dealing with a recurring candida or other type of yeast infection? Have you been feeling restless, troubled sleeping or nightmares along with headache?</h2>
+                    <div class="question_2">
+                        <input id="answer_yes" type="button" value="Yes">
+                        <br>
+                        <input id="answer_no" type="button" value="No">
+                    </div>
+                <br>
+                <br>
+                <br>
+                <h2 class="quiz-question">Have you been feeling restless, troubled sleeping or nightmares along with headache?</h2>
+                    <div class="question_2">
+                        <input id="answer_yes" type="button" value="Yes">
+                        <br>
+                        <input id="answer_no" type="button" value="No">
+                    </div>
+                <br>
+                <br>
+                <br>
+                <h2 class="quiz-question">Have you been suffering from nervous exhaustion do to mental overload, nervous breakdowns, depression and/or nerve pain?</h2>
+                    <div class="question_2">
+                        <input id="answer_yes" type="button" value="Yes">
+                        <br>
+                        <input id="answer_no" type="button" value="No">
+                    </div>
+                <br>
+                <br>
+                <br>
+                <h2 class="quiz-question">Have you been suffering from severe insomnia and/or muscular cramps and spasms?</h2>
+                    <div class="question_2">
+                        <input id="answer_yes" type="button" value="Yes">
+                        <br>
+                        <input id="answer_no" type="button" value="No">
+                    </div>
+                <br>
+                <br>
+                <br>
+                <h2 class="quiz-question">Suffering from joint pain, sprains, aches for fever associated with the cold or flu?</h2>
+                    <div class="question_2">
+                        <input id="answer_yes" type="button" value="Yes">
+                        <br>
+                        <input id="answer_no" type="button" value="No">
+                    </div>
+                <br>
+                <br>
+                <br>
+                <h2 class="quiz-question">Have you been dealing with chronic stress and have difficulty sleeping through the night without waking?</h2>
+                    <div class="question_2">
+                        <input id="answer_yes" type="button" value="Yes">
+                        <br>
+                        <input id="answer_no" type="button" value="No">
+                    </div>
+                <br>
+                <br>
+                <br>
+                    <h2 class="quiz-question">Suffering from joint pain, sprains, aches for fever associated with the cold or flu?</h2>
+                    <div class="question_2">
+                        <input id="answer_yes" type="button" value="Yes">
+                        <br>
+                        <input id="answer_no" type="button" value="No">
+                    </div>
+                <br>
+                <br>
+                <br>
+                <h2 class="quiz-question">Suffering from joint pain, sprains, aches for fever associated with the cold or flu?</h2>
+                    <div class="question_2">
+                        <input id="answer_yes" type="button" value="Yes">
+                        <br>
+                        <input id="answer_no" type="button" value="No">
+                    </div>
+                <br>
+                <br>
+                <br>
+                <h2 class="quiz-question">Suffering from joint pain, sprains, aches for fever associated with the cold or flu?</h2>
+                    <div class="question_2">
+                        <input id="answer_yes" type="button" value="Yes">
+                        <br>
+                        <input id="answer_no" type="button" value="No">
+                    </div>
+                    <form action="/results/" method="POST">
+                        {% csrf_token %}
+                        <input name="number" type="hidden" value="" />
+                        <input name="redirect" type="hidden" value="true" />
+                        <button class="btn btn-success">Submit</button>
+                    </form>
+                    <div class="quiz-result">
+                        <input type="submit" value="Submit" id="submit">
+                    </div>
+          
+
+            </form>
+          
+        
+
+          </div>
+
+
+
+
+    
+
+
+{% endblock content %}

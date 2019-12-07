@@ -7,16 +7,19 @@
 
 {% block content %}
 <div class="jumbotron">
-  <h1 class="display-4">My Site</h1>
-  <p class="lead">This is a simple Jumbotron component from Bootstrap 4.</p>
+  <h1 class="display-4">Herbal Antidote Generator</h1>
+  <p class="lead">Feeling rundown and don't know where to start?</p>
   <hr class="my-4">
-  <p>Edit this to include your content.</p>
+  <p>Take our simple wellness quiz for an herbal reccommendation.</p>
   <p class="lead">
-    <a class="btn btn-primary btn-lg" href="{% url 'about' %}" role="button">Learn more</a>
+    <a class="btn btn-primary btn-lg" href="{% url 'quiz' %}" role="button">Take the Quiz</a>
   </p>
 </div>
 
 <p>More stuff. {{ example_context_variable }}.</p>
+
+
+
 
 {% endblock content %}
 
