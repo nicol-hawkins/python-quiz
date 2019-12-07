@@ -7,7 +7,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>
         {% block title %}
-            My Site
+            Herbal Antitode
         {% endblock title %}
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,6 +25,7 @@
 
     <!-- Add your custom CSS to this file -->
     <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+    <link href="{% static 'css/quiz.css' %}" rel="stylesheet">
 
   </head>
 
@@ -34,7 +35,7 @@
     <div class="container">
         <a class="navbar-brand" href="/">
             <!-- Add your logo here!  <img src="" /> -->
-            My Site
+            Herbal Antidote
         </a>
 
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,16 +47,34 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'home' %}">Start</a>
+                    <a class="nav-link" href="{% url 'quiz' %}">Quiz</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'about' %}">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'view_all_users' %}">Users</a>
+                    <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Browse Herbs
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="">Adaptopgens</a>
+                                <a class="dropdown-item" href="">Anti-Inflammatories</a>
+                                <a class="dropdown-item" href="">Detoxifiers</a>
+                                <a class="dropdown-item" href="">Digestives</a>
+                                <a class="dropdown-item" href="">Expectorants</a>
+                                <a class="dropdown-item" href="">Immune Boosters</a>
+                                <a class="dropdown-item" href="">Nervines</a>
+                                <a class="dropdown-item" href="">Nutritives</a>
+                                <a class="dropdown-item" href="">Tonics</a>
+
+                            </div>
+                    </div>
                 </li>
             </ul>
-            <ul class="navbar-nav ml-auto">
+
+
+            <!-- <ul class="navbar-nav ml-auto">
                 {% if request.user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'logout' %}" >Sign Out</a>
@@ -74,7 +93,7 @@
                         <a id="log-in-link" class="nav-link" href="{% url 'signup' %}">Sign up</a>
                     </li>
                 {% endif %}
-            </ul>
+            </ul> -->
 
         </div>
     </nav>
