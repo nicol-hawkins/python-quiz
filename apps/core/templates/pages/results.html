@@ -9,18 +9,17 @@
 {% block content %}
 
 {% for herb in herbs %}
+<div class ="container">
     <div class="row">
         <div class="col">
-            <img class="img-fluid" src="" />
-        </div>
-        <div class="col">
             <h3>Common name: {{ herb.common_name }}</h3>
-            <h3>Botanical name: {{ herb.botanical_name }}</h3>
+            <h3>Botanical name: <i>{{ herb.botanical_name }}</i></h3>
             <h4>Info: {{ herb.info }}</h4>
             <p>Wow, such shiba, much bork!</p>
 
         </div>
     </div>
+</div>
 {% endfor %}
 
 {% endblock content %}

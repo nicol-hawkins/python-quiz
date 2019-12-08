@@ -56,12 +56,24 @@ def quiz(request):
 
     if request.method == 'POST':
         true_answers = []
+        list_of_ids = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        relevant_herbs = Herb.objects.filter(id__in=list_of_ids)
         for key, value in request.POST.items():
-            print('key', key)
-            print('value', value)
+            
+            # print('key', key)
+            # print('value', value)
+            # print('name', name)
             if value == 'true':       #true?
-                true_answers.append(key)
-                print(true_answers)
+                # DO SPLIT HERE......
+                relevant_herbs = 'answer_1'
+                answer, herb_id = relevant_herbs.split('_')
+                print(relevant_herbs.split('_'))
+                
+                
+                # true_answers.append(herb_id)
+                # herb_id = true_answers
+                # print(true_answers)
+                # print(herb_id)
 
                 context = {
                     'herbs': herbs,
@@ -75,19 +87,28 @@ def quiz(request):
     
 
 def results(request):
+
     
     if request.method == 'POST':
         true_answers = []
+        list_of_ids = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        relevant_herbs = Herb.objects.filter(id__in=list_of_ids)
+        print(relevant_herbs)
         for key, value in request.POST.items():
             print('key', key)
             print('value', value)
-            if value == 'true':       #true?
-                true_answers.append(key)
+            if value == 'true':  
+                # DO SPLIT HERE....
+                answer_string = 'answer_{{ herb.id }}'
+                answer, herb_id = answer_string.split('_')
+                print(herb_id)
+                true_answers.append(herb_id)
                 print(true_answers)
 
-                context = {
-                
-                }
+        herbs = Herb.objects.all()
+        context = {
+            'herbs': herbs,
+        }
         return render(request, 'pages/results.html', context)
 
 
