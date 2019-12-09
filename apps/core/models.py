@@ -4,7 +4,7 @@ from django.db import models
 class Herb(models.Model):
     common_name = models.CharField(max_length=255)
     botanical_name = models.CharField(max_length=255)
-    image = models.ImageField(upload_to='images/')
+    image = models.CharField(max_length=255)
     question = models.CharField(max_length=255)
     info = models.CharField(max_length=255)
     
