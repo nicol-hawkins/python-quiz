@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
 {% block title %}
-    My Site - Home
+    POP Quiz
 {% endblock title %}
 
 
-{% block content %}
+{% block main %}
 
 <form action="/results/" method="POST">
        {% for herb in herbs %} 
@@ -34,4 +34,4 @@
                 <button class="btn btn-success">Submit</button>
             </form>
 
-{% endblock content %}
+{% endblock main %}
