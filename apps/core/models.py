@@ -7,12 +7,11 @@ class Herb(models.Model):
     image = models.ImageField(upload_to='images/')
     question = models.CharField(max_length=255)
     info = models.CharField(max_length=255)
-
+    
 
     
 
-    # def __str__(self):
-    #     return self.common_name
+
 
 
 # skullcap = Herb.objects.create(
@@ -28,7 +27,7 @@ class Herb(models.Model):
 #     common_name="Mullein",
 #     botanical_name="Verbascum thapus",
 #     image="static/images/skullcap.png",
-#     question="Have you been suffering from nervous exhaustion do to mental overload, nervous breakdowns, depression and/or nerve pain?",
+#     question="Question about Mullein",
 #     info="Skullcap is a is a restorative nervine thats restores the nervous system and can reduce pain caused by neuraligia. It is only mildy sedating, which makes it suitable to take any time of day.",
 # )    
 
@@ -37,7 +36,7 @@ class Herb(models.Model):
 #     common_name="Oat Seed",
 #     botanical_name="Avena Sativa",
 #     image="static/images/skullcap.png",
-#     question="Have you been suffering from nervous exhaustion do to mental overload, nervous breakdowns, depression and/or nerve pain?",
+#     question="Question about oat seed",
 #     info="Skullcap is a is a restorative nervine thats restores the nervous system and can reduce pain caused by neuraligia. It is only mildy sedating, which makes it suitable to take any time of day.",
 # )    
 
@@ -46,8 +45,7 @@ class Herb(models.Model):
 #     common_name="Passionflower",
 #     botanical_name="Passiflora incarnata",
 #     image="static/images/skullcap.png",
-#     question="Have you been suffering from nervous exhaustion do to mental overload, nervous breakdowns, depression and/or nerve pain?",
-#     info="Skullcap is a is a restorative nervine thats restores the nervous system and can reduce pain caused by neuraligia. It is only mildy sedating, which makes it suitable to take any time of day.",
+#     question="Passion flower",
 # )    
 
 
