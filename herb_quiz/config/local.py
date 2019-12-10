@@ -15,7 +15,7 @@ DATABASES = {
 
 INSTALLED_APPS += [
     'debug_toolbar',
-    # 'django.contrib.staticfiles'
+    'django.contrib.staticfiles'
     ]
 
 # Add in Debug Toolbar Middleware

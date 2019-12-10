@@ -21,17 +21,9 @@
             </div>
         </div>
         {% endfor %}
-        <button>Submit</button>
+        <button class="btn btn-success">Submit</button>
 
 </form>
-            
-          <br><br><br>
 
-            <form action="/results/" method="POST">
-                {% csrf_token %}
-                <input name="number" type="hidden" value="" />
-                <input name="redirect" type="hidden" value="true" />
-                <button class="btn btn-success">Submit</button>
-            </form>
 
 {% endblock content %}
