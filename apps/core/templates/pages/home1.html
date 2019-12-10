@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}
+    My Site - Home
+{% endblock title %}
+
+
+{% block content %}
+<div class="jumbotron">
+  <h1 class="display-4">Herbal Antidote Test</h1>
+  <p class="lead">Feeling rundown and don't know where to start?</p>
+  <hr class="my-4">
+  <p>Take our simple wellness quiz for an herbal reccommendation.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="{% url 'quiz' %}" role="button">Take the Quiz</a>
+  </p>
+</div>
+
+<p>More stuff. {{ example_context_variable }}.</p>
+
+
+
+
+{% endblock content %}
+
+
