@@ -7,9 +7,6 @@ class Herb(models.Model):
     image = models.CharField(max_length=255)
     question = models.CharField(max_length=255)
     info = models.CharField(max_length=255)
-    
-
-    
 
 
 

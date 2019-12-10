@@ -8,21 +8,27 @@
 
 {% block content %}
 
-    {% for herb in herbs %}
-    <div class ="container">
-        <div class="row">
-            <div class="col">
-                {{ herb.id }}
-                <h3>Common name: {{ herb.common_name }}</h3>
-                <h3>Botanical name: <i>{{ herb.botanical_name }}</i></h3>
-                {% load static %}
-                <img src="{{ herb.image }}" alt="herb image">
-                <h4>Info: {{ herb.info }}</h4>
-                <p>Wow, such shiba, much bork!</p>
 
+{% load static from staticfiles %}
+<h2> Your herbal recommendations:</h2>
+    <!-- {% for herb in herbs %} -->
+        {% if herb in relevant_herbs %}
+        
+        <div class ="container">
+            <div class="row">
+                <div class="col">              
+                    <h3>Common name: {{ herb.common_name }}</h3>
+                    <h3>Botanical name: <i>{{ herb.botanical_name }}</i></h3>
+
+                    <img src="/static/{{ herb.image }}" alt="herb image">
+                    <h4>{{ herb.info }}</h4>
+                    <br><br><br>
+
+                </div>
             </div>
         </div>
-    </div>
-    {% endfor %}
+        
+        {% endif %}
+    <!-- {% endfor %} -->
 
 {% endblock content %}
