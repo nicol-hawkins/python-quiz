@@ -2,7 +2,7 @@ from django.urls import path
 
 from apps.core import views
 
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -12,4 +12,4 @@ urlpatterns = [
     
 ] 
 
-urlpatterns += staticfiles_urlpatterns()
+
