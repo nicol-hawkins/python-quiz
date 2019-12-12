@@ -1,7 +1,7 @@
 [[source]]
+name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
-name = "pypi"
 
 [packages]
 django = "*"
@@ -11,7 +11,6 @@ gunicorn = "*"
 psycopg2-binary = "*"
 bootstrap4 = "*"
 django-debug-toolbar = "*"
+requests = "*"
 
 
-[dev-packages]
-django-debug-toolbar = "*"

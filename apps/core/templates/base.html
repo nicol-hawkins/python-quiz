@@ -43,7 +43,8 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Herbal Remedies</a>
+        
+      <a class="navbar-brand js-scroll-trigger" href="{% url 'home' %}">Herbal Remedies</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -51,13 +52,13 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">Herbal Antidote</a>
+            <a class="nav-link js-scroll-trigger" href="{% url 'home' %}">Herbal Antidote</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="{% url 'quiz' %}">Quiz</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            <a class="nav-link js-scroll-trigger" href="{% url 'locate' %}">Store Locator</a>
           </li>
           
         </ul>
@@ -69,9 +70,11 @@
   <header class="masthead">
     <div class="container">
       <div class="intro-text">
-        <div class="intro-lead-in">Hello there!</div>
-        <div class="intro-heading text-uppercase">Have you tried going natural?</div>
+        <div class="intro-lead-in">{% block header1 %} Hello there!{% endblock header1 %}</div>
+        <div class="intro-heading text-uppercase">{% block header2 %}Have you tried going natural?{% endblock header2 %}</div>
+        {% block quizbutton %}
         <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{% url 'quiz' %}">Take Our Quiz</a>
+        {% endblock quizbutton %}
       </div>
     </div>
   </header>

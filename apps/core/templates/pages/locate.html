@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Find A Store
+{% endblock title %}
+
+{% block header1 %}Find a local retailer{% endblock header1 %}
+
+{% block header2 %}Your on your way to a healtier alternative{% endblock header2 %}
+
+{% block quizbutton %}<h1>Don't stop now</h1>>{% endblock quizbutton %}
+
+
+{% block main %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+
+
+<h2>Search Herbal Stores Near you</h2>
+
+<p></p>
+
+<form class="example" action="https://www.google.com/search" method = "GET" style="margin:left;max-width:1500px">
+
+
+  <input type="text" placeholder="Search..." name="q" >
+
+
+  <button type="submit"><i class="fa fa-search"></i></button>
+  
+</form>
+
+<iframe width="1500" height="500" frameborder="0" style="border:0" 
+
+src="https://www.google.com/maps/embed/v1/search?q=herbal%20store%20in%20bay%20area&key=AIzaSyDOWpD8jNHxjkOrNlI7Coka1wW5NU8-tJU" 
+
+allowfullscreen>
+
+</iframe>
+
+
+
+
+
+
+{% endblock main %}
+
+
