@@ -1,15 +1,11 @@
 [[source]]
+name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
-name = "pypi"
-
-[packages]
-django = "*"
-django-bootstrap4 = "*"
-django-heroku = "*"
-gunicorn = "*"
-psycopg2-binary = "*"
 
 [dev-packages]
-django-debug-toolbar = "*"
 
+[packages]
+
+[requires]
+python_version = "3.7"
