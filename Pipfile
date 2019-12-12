@@ -2,16 +2,6 @@
 name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
-<<<<<<< HEAD
-
-[dev-packages]
-
-[packages]
-
-[requires]
-python_version = "3.7"
-=======
-name = "pypi"
 
 [packages]
 django = "*"
@@ -21,8 +11,6 @@ gunicorn = "*"
 psycopg2-binary = "*"
 bootstrap4 = "*"
 django-debug-toolbar = "*"
+requests = "*"
 
 
-[dev-packages]
-django-debug-toolbar = "*"
->>>>>>> 6b9965b70776bd092c2240b6ba922fdb158d794c
