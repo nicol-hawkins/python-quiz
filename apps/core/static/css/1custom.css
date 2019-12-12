@@ -13,3 +13,11 @@
     margin-top: -10px;
     margin-bottom: -10px;
 }
+
+
+.icon {
+    border-radius: 50%;
+    width: 175px;
+    background-color: rgb(248, 204, 58);
+  }
+
