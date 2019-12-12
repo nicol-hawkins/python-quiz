@@ -1,0 +1,15 @@
+/* Custom CSS goes here */
+
+.navbar {
+    background: linear-gradient(135deg, #6b6b53 0%, #41664a 100%);
+}
+
+.card-user {
+    max-width: 80px;
+}
+
+.navbar-avatar {
+    height: 30px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}

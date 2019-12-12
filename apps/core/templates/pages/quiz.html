@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+    POP Quiz
+{% endblock title %}
+
+
+{% block main %}
+
+<form action="/results/" method="POST">
+       {% for herb in herbs %} 
+       {% csrf_token %}
+        <div class="quiz">
+            <div class="question_1">
+                <h2 class="quiz-question">{{ herb.question }}</h2>
+                <div class="question_1">
+                        <br>
+                        <input type="radio" name="answer_{{ herb.id }}" value="true"> Yes<br>
+                        <input type="radio" name="answer_{{ herb.id }}" value="false"> No<br>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <button class="btn btn-success">Submit</button>
+
+</form>
+
+
+{% endblock main %}
