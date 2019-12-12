@@ -13,7 +13,7 @@ def home(request):
 def about(request):
     context = {}
 
-    return render(request, 'pages/about.html', context)
+    return render(request, 'pages/locate.html', context)
 
 
 
