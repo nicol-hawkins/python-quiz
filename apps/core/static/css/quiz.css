@@ -81,3 +81,40 @@ body {
     padding:20px;
     
   }
+
+
+
+
+  .quiz-card {
+    /* Add shadows to create the "card" effect */
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 800px;
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+    padding-top: 10px;
+    opacity: .85;
+    background-color: white;
+  }
+
+
+  /* .mint {
+    background-image: url('mint.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  } */
+
+  .mint {
+    width: 1200px;
+    height:600px;
+    background-image: url("/static/images/mint.jpg");
+    background-size: cover; /* or contain depending on what you want */
+    background-position: center center;
+    background-repeat: repeat;
+    /* text-align:center; */
+    margin:auto;
+    padding:0;
+  }
+

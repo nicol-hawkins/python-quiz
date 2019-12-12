@@ -56,3 +56,15 @@ img {
   .herb.info {
       text-align: center;
   }
+
+
+  .floral-background {
+    background-size: contain;
+    background-image: url("/static/images/greyfloral.jpg");
+    background-size: cover; /* or contain depending on what you want */
+    background-position: center center;
+    background-repeat: repeat;
+
+  }
+
+ 
