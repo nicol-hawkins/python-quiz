@@ -1,6 +1,26 @@
 from django.shortcuts import render
+import requests
 from .models import Herb
 
+
+def index(request):
+    response= requests.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=37.804363,-122.271111&radius=1500&type=chinesemedicine&keyword=herbshop&key=AIzaSyDOWpD8jNHxjkOrNlI7Coka1wW5NU8-tJU')
+    print(response.status_code)
+    print(response.json())
+
+    if request.method == 'POST':
+       pass
+    # print(request.POST)
+    #     form = CityForm(request.POST)       #for adding into the form
+    #     form.save()
+
+def searchherbstore(request):
+    context = {}
+
+    return render(request, 'pages/searchherbstore.html', context)
+
+
+     
 # Two example views. Change or delete as necessary.
 def home(request):
 
@@ -51,5 +71,21 @@ def quiz(request):
             'relevant_herbs': relevant_herbs,
         }
         return render(request, 'pages/results.html', context)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     return render(request, 'pages/quiz.html', context)
