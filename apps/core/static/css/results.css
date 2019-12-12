@@ -1,4 +1,58 @@
+
 img {
     width: 500px;
     height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;  
  }
+
+
+ .cover {
+    background: url('/static/images/greyfloral.jpg');
+    background-repeat: repeat-x; 
+}
+
+ .herb-name {
+    text-align: left;
+    padding-left: 10px;
+ }
+
+ .text-center {
+    text-align: center;
+    font-size: 15.3pt;
+ }
+
+
+ .herb-card {
+    /* Add shadows to create the "card" effect */
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 700px;
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+    padding-top: 10px;
+  }
+
+ 
+
+  /* On mouse-over, add a deeper shadow */
+  .herb-card:hover {
+    box-shadow: 0 20px 35px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .card-container {
+    padding: 10px 10px;
+    width: 600px;
+    margin: auto;
+    
+  }
+
+
+  .herb.info {
+      text-align: center;
+  }
