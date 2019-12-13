@@ -1,7 +1,7 @@
 /* Custom CSS goes here */
 
 .navbar {
-    background: linear-gradient(135deg, #000000 0%, #000000 100%);
+    background: linear-gradient(135deg, #3f3939 0%, #000000 100%);
 }
 
 .card-user {
@@ -21,12 +21,29 @@
     margin: 20px;
 } */
 
+.welcome {
+    font-family: 'Droid Serif';
+    font-size: 34pt;
+    margin-top: -40px;
+    font-style: italic;
+}
+
 
 .icon {
     border-radius: 50%;
     width: 175px;
     background-color: rgb(248, 204, 58);
   }
+
+
+.white-container {
+    width: 1250px;
+    height: auto;
+    background-color: rgb(148, 148, 148);
+    padding-bottom: 45px;
+}
+
+
 
   
 

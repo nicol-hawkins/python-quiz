@@ -4,14 +4,17 @@
     Find A Store
 {% endblock title %}
 
-{% block header1 %}Find a local retailer{% endblock header1 %}
+<!-- {% block header1 %}Find a local retailer{% endblock header1 %}
 
 {% block header2 %}Your on your way to a healtier alternative{% endblock header2 %}
 
-{% block quizbutton %}<h1>Don't stop now</h1>>{% endblock quizbutton %}
+{% block quizbutton %}<h1>Don't stop now</h1>>{% endblock quizbutton %} -->
 
 
 {% block main %}
+
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
@@ -26,7 +29,7 @@ body {
 form.example input[type=text] {
   padding: 10px;
   font-size: 17px;
-  border: 1px solid grey;
+  border: 0px solid grey;
   float: left;
   width: 80%;
   background: #f1f1f1;
@@ -53,10 +56,14 @@ form.example::after {
   clear: both;
   display: table;
 }
+
+.locate {
+  margin-top: 115px;
+}
 </style>
 
-
-<h2>Search Herbal Stores Near you</h2>
+<div class="locate">
+<h2>Search Herb Stores Near you:</h2>
 
 <p></p>
 
@@ -77,6 +84,7 @@ src="https://www.google.com/maps/embed/v1/search?q=herbal%20store%20in%20bay%20a
 allowfullscreen>
 
 </iframe>
+</div>
 
 
 

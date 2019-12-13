@@ -4,35 +4,75 @@
     POP Quiz
 {% endblock title %}
 
-{% block header1 %}Try taking our Quiz{% endblock header1 %}
+<!-- {% block header1 %}Try taking our Quiz{% endblock header1 %}
 
 {% block header2 %}Your on your way to a healtier alternative{% endblock header2 %}
 
-{% block quizbutton %}<h1>YAY You!</h1>>{% endblock quizbutton %}
+{% block quizbutton %}<h1>YAY You!</h1>>{% endblock quizbutton %} -->
+
+{% block body_extra_attributes %}
+style="background-image: url('/static/images/greyfloral.jpg');"
+{% endblock %}
 
 
 {% block main %}
-<body class="mint">
-<div class="quiz-card">
+<!-- <body class="mint"> -->
+
+
+    
+<div class="mint-container">
+    <img src="/static/images/mint.jpg" alt="Mint" style="width:100%;">
+    <div class="centered-intro">Let's get started!</div>
+    <div class="centered-text"><br><br><b>Please answer the following questions
+    to generate your herbal recommendations.</b></div>
+</div>
+
+
+
+ 
+<!-- <div class="quiz-card"> -->
 <form action="/results/" method="POST">
-    <br><br><br><br><br><br>
+    
        {% for herb in herbs %} 
        {% csrf_token %}
-        <div class="quiz">
-            <div class="question_1">
-                <h3 class="quiz-question">{{ herb.question }}</h3>
-                <div class="question_1">
-                        <br>
-                        <input type="radio" name="answer_{{ herb.id }}" value="true"> Yes<br>
-                        <input type="radio" name="answer_{{ herb.id }}" value="false"> No<br>
-                </div>
-            </div>
+    <div class="quiz-container">
+       <div class="quiz-card">
+            <div class="quiz">
+                    <h3 class="quiz-question">{{ herb.question }}<br></h3>
+                    <br><br>
+                        <div class="radio">
+                            <ul class="styled-list">
+                                <li>
+                                <label class="radio-label">
+                                    <input type="radio" name="answer_{{ herb.id }}" value="true">
+                                    Yes
+                                    <div class="check"><div class="inside"></div></div>
+                                </label>
+                                </li>
+                                <span></span> 
+                                <label class="radio-label">
+                                <li>
+                                    <input type="radio" name="answer_{{ herb.id }}" value="false">
+                                    No
+                                    <div class="check"><div class="inside"></div></div>
+                                </li>
+                                </li>
+                            </ul>
+                        </div>
+             </div>
         </div>
+    </div>
         {% endfor %}
+        <div class="btn-center">
         <button class="btn btn-success">Submit</button>
-        <br><br><br>
+        </div>
+
+        </div>
+
 </form>
-</div>
-</body>
+<!-- </div> -->
+<!-- </body> -->
 
 {% endblock main %}
+
+
