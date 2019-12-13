@@ -1,7 +1,7 @@
 /* Custom CSS goes here */
 
 .navbar {
-    background: linear-gradient(135deg, #3f3939 0%, #000000 100%);
+    background: linear-gradient(135deg, #302c2c 0%, #000000 100%);
 }
 
 .card-user {
@@ -39,7 +39,7 @@
 .white-container {
     width: 1250px;
     height: auto;
-    background-color: rgb(148, 148, 148);
+    background-color: white;
     padding-bottom: 45px;
 }
 
