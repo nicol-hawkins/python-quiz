@@ -1,6 +1,6 @@
 
 img {
-    width: 500px;
+    width: 475px;
     height: auto;
     display: block;
     margin-left: auto;
@@ -8,16 +8,23 @@ img {
     width: 85%;  
  }
 
-
- .cover {
-    background: url('/static/images/greyfloral.jpg');
-    background-repeat: repeat-x; 
-}
+ .results-container {
+   margin-top: 50px;
+ }
 
  .herb-name {
     text-align: left;
-    padding-left: 10px;
+    padding-left: 52px;
  }
+
+ .botanical-name {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 18pt;
+}
+
+h3 .botanical-name {
+  font-family: 'Kaushan Script', cursive;
+}
 
  .text-center {
     text-align: center;
@@ -33,8 +40,10 @@ img {
     width: 700px;
     margin: 0 auto; /* Added */
     float: none; /* Added */
-    margin-bottom: 10px; /* Added */
-    padding-top: 10px;
+    margin-bottom: 15px; /* Added */
+    padding-top: 12px;
+    padding-bottom: 5px;
+    background-color: white;
   }
 
  
@@ -49,6 +58,7 @@ img {
     padding: 10px 10px;
     width: 600px;
     margin: auto;
+    opacity: .9;
     
   }
 
@@ -56,3 +66,7 @@ img {
   .herb.info {
       text-align: center;
   }
+
+
+
+ 

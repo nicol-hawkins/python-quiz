@@ -5,22 +5,34 @@
 {% endblock title %}
 
 
-{% block header1 %}Thank you for taking our quiz{% endblock header1 %}
+<!-- {% block header1 %}Thank you for taking our quiz{% endblock header1 %}
 
 {% block header2 %}Your on your way to a healtier alternative{% endblock header2 %}
 
-{% block quizbutton %}<h1>See your results below</h1>>{% endblock quizbutton %}
+{% block quizbutton %}<h1>See your results below</h1>>{% endblock quizbutton %} -->
 
-{% block main %}
+{% block main %} 
 
-<div class="cover">
+{% block body_extra_attributes %}
+style="background-image: url('/static/images/greyfloral.jpg');"
+{% endblock %}
 
 
+<div class="mint-container">
+        <img src="/static/images/mint.jpg" alt="Mint" style="width:100%;">
+        <div class="centered-intro"><i>Well done!</i></div>
+        <div class="centered-text"><br><br><b>Based on your answers, you could consider 
+        the following herbs in a tea or tincture:</b></div>
+    </div>
+
+<!-- <br><br><br><br><br>
+<div class="results-intro">
 <h1> Based on your answers, you could consider trying the following herbs in a tea or tincture:</h1>
-<br><br><br>
+</div>
+<br><br><br><br> -->
     <!-- {% for herb in herbs %} -->
         {% if herb in relevant_herbs %}
-
+    <div class="results-container">
         <div class="herb-card">
             <h2 class="herb-name">{{ herb.common_name }}</h2>
             <img src="/static/{{ herb.image }}" alt="Herb Image">
@@ -29,18 +41,20 @@
                 <div class="row">
                     <div class="col">
                         <div class="text-center">
-                            <h4>Botanical name: <i>{{ herb.botanical_name }}</i></h4>
+                            <div class="botanical-name">
+                                <h3 class="botanical-name"><i>{{ herb.botanical_name }}</i></h3>
+                            </div>
                             {{ herb.info }}
                         </div>
                     </div>            
                 </div>
             </div>
         </div>
-        <br><br><br>
+    </div>
         
         {% endif %}
     <!-- {% endfor %} -->
 
-</div>
+    </body>
 
 {% endblock main %}
